@@ -1,0 +1,186 @@
+
+// ============= Banner Start Here =======================
+.banner {
+    padding: 210px 0 177px;
+    position: relative;
+    @media (max-width: 1199px) {
+        padding: 180px 0 147px;
+    }
+    @media (max-width: 991px) {
+        padding: 120px 0 136px;
+    }
+    @media (max-width: 575px) {
+        padding: 90px 0 100px;
+    }
+    .banner-thumbs {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        flex-wrap: wrap;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            opacity: 0.2;
+        }
+        .banner-bg {
+            &:first-child {
+                width: 50%;
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+            &:last-child {
+                width: 50%;
+                background-position: right center;
+                z-index: 1;
+                @media (max-width: 991px) {
+                    width: 100%;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background-color: #000;
+                        z-index: -1;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+}
+.banner-content {
+    position: relative;
+    z-index: 2;
+    @media (max-width: 991px) {
+       text-align: center;
+    }
+    .subtitle {
+        color: $base-color;
+        font-size: 18px;
+        margin-bottom: 30px;
+    line-height: 0; 
+    }
+    .title {
+        font-size: 70px;
+        color: $white;
+        margin-bottom: 35px;
+        max-width: 14ch;
+        line-height: 1.1;
+        @media (max-width: 1199px) {
+            font-size: 60px;
+        }
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+        @media (max-width: 767px) {
+            font-size: 55px;
+        }
+        @media (max-width: 575px) {
+            font-size: 50px;
+        }
+        @media (max-width: 400px) {
+            font-size: 36px;
+        }
+        span {
+            color: $base-color;
+        }
+    }
+}
+.play-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    @media (min-width: 992px) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    a {
+        color: $base-color;
+        font-size: 30px;
+        background-color: $white; 
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid $base-color;
+        font-size: 18px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 80px;
+            height: 80px;
+            background: $white;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            animation: animate 2.3s ease-out infinite;
+            @media (max-width: 575px) {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        @media (max-width: 575px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+@keyframes animate{
+    0%{
+      transform: scale(0);
+      opacity: 1;
+    }
+    30%{
+      transform: scale(.6);
+      opacity: 1;
+    }
+    60%{
+      transform: scale(1.5);
+      opacity: .9;
+    }
+    100%{
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+
+
+.banner-buttons {
+    margin: 0 -10px;
+    @media (max-width: 991px) {
+        justify-content: center;
+     }
+     &__item {
+        padding: 0 10px;
+     }
+    // a {
+    //     &:first-child {
+    //         margin-right: 15px;
+    //         @media (max-width: 575px) {
+    //             margin-right: 5px;
+    //         }
+    //     }
+    // }
+}
+
+// ============= Banner End Here =======================

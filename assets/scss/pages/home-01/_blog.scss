@@ -1,0 +1,120 @@
+.blog {
+  .section-header {
+    &.style-two {
+        .title {
+            margin: 0;
+            max-width: 20ch;
+        }
+    }
+    .section-para {
+        max-width: 600px;
+        .para {
+            margin-right: 52px;
+            @media (max-width: 991px) {
+                margin-left: 0;
+            }
+        }
+    }
+  }
+  @media (max-width: 991px) {
+      padding-top: 40px;
+  }
+}
+
+// Blog Item
+.blog-slider {
+    margin-top: 0px;
+    &__item {
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (max-width: 767px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+.blog-item {
+    margin-top: 20px;
+    border: 1px solid #dddddd3b;
+    .thumb {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        a {
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s;
+                max-height: 350px;
+              }
+          }
+    }
+    .content {
+        padding: 0 28px 20px;
+        @media (max-width: 991px) {
+            padding: 0 22px 15px;
+        }
+        @media (max-width: 575px) {
+            padding: 0 18px 10px;
+        }
+        .blog-comment {
+            padding: 25px 0 15px;
+            margin: 0 -10px;
+            @media (max-width: 991px) {
+                padding: 30px 0 20px;
+            }
+            @media (max-width: 575px) {
+                padding: 20px 0 10px;
+            }
+            li {
+                padding: 0 10px;
+                color: $body-color;
+                font-size: 15px;
+                @media (max-width: 991px) {
+                    padding: 0 7px;
+                }
+                @media (max-width: 575px) {
+                    font-size: 14px;
+                    padding: 0 5px;
+                }
+                span {
+                    color: $base-color;
+                    margin-right: 10px;
+                    font-size: 14px;
+                    @media (max-width: 575px) {
+                        margin-right: 5px;
+                    }
+                  }
+                  a {
+                    color: #000;
+                    font-size: 14px;
+                    &:hover {
+                        color: $base-color;
+                    }
+                  }
+              }
+          }
+          .title {
+            a {
+                color: #000;
+                font-size: 24px;
+                font-weight: 500;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                @media (max-width: 575px) {
+                    font-size: 18px;
+                }
+                &:hover {
+                    color: $base-color;
+                }
+              }
+          }
+      }
+}
+
+

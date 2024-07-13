@@ -1,0 +1,122 @@
+.offer {
+  @media (max-width: 991px) {
+    background-size: 0;
+    background-color: #fafafa;
+  }
+}
+
+.pricing-progress {
+  .pricing-time {
+    display: block;
+    color: $secondary-color;
+  }
+}
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  transform: rotate(-90deg);
+  width: 100%;
+  circle {
+    fill: rgba(0, 0, 0, 0);
+    stroke: $white;
+    stroke-dashoffset: 219.91148575129;
+    stroke-width: 3;
+    &.incomplete {
+      opacity: 0.25;
+    }
+    &.complete {
+      stroke-dasharray: 219.91148575129;
+    }
+  }
+  text {
+    fill: rgb(0, 0, 0);
+    text-anchor: middle;
+  }
+  circle {
+    stroke: $base-color;
+  }
+}
+
+//Countdown Cssss
+#offer-countdown {
+  .single-countdown {
+    flex-basis: 90px;
+    border: 3px solid #FDF3F3;
+    border: 3px solid #f500003d;
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    height: 90px;
+    h4 {
+      font-size: 24px;
+    }
+    span {
+      color: $secondary-color;
+      font-size: 16px;
+    }
+  }
+}
+#offer-countdown {
+  @media (max-width: 575px) {
+    justify-content: center;
+  }
+  .single-countdown {
+    flex-basis: 90px;
+    border: 3px solid #f500004b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    height: 90px;
+    margin: 0 5px ;
+    h4 {
+      font-size: 24px;
+    }
+    span {
+      color: $secondary-color;
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+// Bottom Text
+.offer-button-price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  .offer-price {
+    padding-left: 30px;
+    @media (max-width: 475px) {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    .price {
+      font-size: 40px;
+      color: $base-color;
+      @media (max-width: 767px) {
+        font-size: 35px;
+      }
+      @media (max-width: 575px) {
+        font-size: 30px;
+      }
+      .month {
+        color: #333;
+        font-size: 20px;
+      }
+      .previous-price {
+        color: $body-color;
+        font-size: 30px;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

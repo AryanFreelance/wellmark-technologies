@@ -1,0 +1,108 @@
+.home-two-banner {
+  background-color: $secondary-color;
+  padding: 180px 0 93px;
+  position: relative;
+  overflow: hidden;
+  background-color: #222429;
+  @media (max-width: 1199px) {
+    padding: 150px 0 60px;
+  }
+  @media (max-width: 991px) {
+    padding: 150px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 130px 0;
+  }
+  @media (max-width: 575px) {
+    padding: 100px 0;
+  }
+  .banner-right-image {
+    animation: map 30s linear infinite;
+    @media (max-width: 991px) {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+@keyframes map {
+  0%{
+      transform: rotate(45deg)
+  }
+  50%{
+    transform: rotate(0deg)
+  }
+  100%{
+      
+    transform: rotate(45deg)
+  }
+}
+
+.banner-before-after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 575px) {
+    display: none;
+  }
+  span {
+      &:first-child img{
+        position: absolute;
+        top: 3%;
+        animation: shape01 20s linear infinite;
+        height: 350px;
+      }
+      &:nth-child(2) img{
+        transform: translateY(50%);
+        opacity: 0.8;
+        animation: shape02 21s linear infinite;
+        height: 350px;
+        margin-left: -3px;
+      }
+      &:nth-child(3) img{
+        right: 0;
+        position: absolute;
+        animation: shape03 20s linear infinite;
+        top: 0;
+      }
+  }
+}
+
+@keyframes shape01 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    100%{
+        
+        transform: translateY(0px);
+    }
+}
+@keyframes shape02 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(150px);
+    }
+    100%{
+        
+        transform: translateY(0px);
+    }
+}
+@keyframes shape03 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-200px);
+    }
+    100%{
+        
+        transform: translateY(0px);
+    }
+}

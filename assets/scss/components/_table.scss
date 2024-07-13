@@ -1,0 +1,154 @@
+
+
+//====================== Table Css Structure  =======================
+.custom--table tr th, .custom--table tr td {
+    position: relative;
+    text-align: center;
+    color: $white;
+    vertical-align: middle;
+   @media (max-width: 991px) {
+    display: block;
+    text-align: right !important;
+   }
+}
+.custom--table tr td:first-child {
+    text-align: left;
+}
+.custom--table.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #0f3c70;
+}
+
+// Custom Table Style Two
+.custom--table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    thead {
+        tr {
+            th {
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    [data-label]::before {
+        position: absolute;
+        content: attr(data-label);
+        font-weight: 500;
+        color: $white;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        display: none;
+        font-size: 16px; 
+        text-align: left;
+        @media (max-width: 991px) {
+            display: block;
+            width: 50% !important;
+        }
+    }
+    &.table-responsive--xl {
+        &.table > :not(caption) > * > * {
+            border-width: 1px !important;
+            border-color: #0f3c70;
+            padding: 0px;
+          }
+          thead {
+              tr {
+                  th {
+                      @media (max-width: 1199px) {
+                          display: none;
+                      }
+                  }
+              }
+          }
+        &.style-two {
+            border-collapse: collapse;
+            thead {
+                tr {
+                    th {
+                        padding: 30px !important;
+                        font-weight: 400;
+                    }
+                }
+            }
+            @media (max-width: 1199px) {
+                tr td {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 10px;
+                    @media (max-width: 575px) {
+                        padding-left: 45%;
+                    }
+                }
+                [data-label]::before {
+                    position: absolute;
+                    content: attr(data-label);
+                    font-weight: 400;
+                    color: $white;
+                    top: 50%;
+                    left: 0;
+                    padding: 15px;
+                    display: none;
+                    font-size: 16px; 
+                    transform: translateY(-50%);
+                    text-align: left;
+                    @media (max-width: 1199px) {
+                        display: block;
+                        width: 50% !important;
+                    }
+                }
+            }
+        }
+    }
+    &.table-responsive--md {
+        &.table > :not(caption) > * > * {
+            border-width: 1px !important;
+            border-color: #0f3c70;
+            padding: 0px;
+          }
+          thead {
+            tr {
+                th {
+                    @media (max-width: 991px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.style-two {
+            border-collapse: collapse;
+            thead tr th {
+                padding: 30px !important;
+                font-weight: 400;
+            }
+            @media (max-width: 991px) {
+                tr td {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                [data-label]::before {
+                    position: absolute;
+                    content: attr(data-label);
+                    font-weight: 400;
+                    color: $white;
+                    top: 50%;
+                    left: 0;
+                    padding: 15px;
+                    display: none;
+                    font-size: 16px; 
+                    transform: translateY(-50%);
+                    text-align: left;
+                    @media (max-width: 991px) {
+                        display: block;
+                        width: 50% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+   
+

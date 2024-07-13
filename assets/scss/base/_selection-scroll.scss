@@ -1,0 +1,23 @@
+::selection {
+    color: $white;
+    background-color: #ce0f0f;
+}
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $base-color;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    &:active {
+        background-color: $base-color;
+    }
+}
+::-webkit-scrollbar-track {
+    background-color: $secondary-color;
+}

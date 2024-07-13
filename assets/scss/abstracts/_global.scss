@@ -1,0 +1,115 @@
+// ====================== Section Heading ====================
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  @media (max-width: 767px) {
+    margin-bottom: 45px;
+  }
+  @media (max-width: 575px) {
+    margin-bottom: 30px;
+  }
+  &.style-two {
+    text-align: left;
+    .title {
+      margin: 0;
+    }
+  }
+  .subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: $base-color;
+    margin-bottom: 6px;
+  }
+  .title {
+    max-width: 29ch;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: 600;
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+    @media (max-width: 767px) {
+        font-size: 35px;
+    }
+    @media (max-width: 575px) {
+        font-size: 30px;
+    }
+  }
+  .para {
+    margin-top: 20px;
+    max-width: 495px;
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+}
+// ====================== Section Heading En d====================
+
+
+//================= Slick Arrow & Dots css Start ================
+.slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: $white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .4s;
+    border: 1px solid $base-color;
+    color: $base-color;
+    top:  -133px;
+  }
+  @media (max-width: 991px) {
+    .slick-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+  .slick-arrow:hover {
+    background-color: $base-color;
+    border-color: $base-color;
+    color: $white;
+  }
+  .slick-next {
+    right: 100px;
+  }
+  
+  .slick-prev {
+    right: 40px;
+  }
+
+//  Dots
+.slick-dots {
+    text-align: center;
+    padding-top: 20px;
+    li {
+        display: inline-block;
+        button {
+          border: none;
+          background: #000;
+          color: #fff;
+          margin: 0 3px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          text-indent: -9999px;
+          transition: .5s;
+        }
+        &.slick-active button {
+            background: $base-color;
+            width: 25px;
+            height: 10px;
+            border-radius: 5px;
+        }
+    }
+}
+//================= Slick Arrow & Dots css Start ================
+

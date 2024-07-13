@@ -1,0 +1,35 @@
+.counterup {
+    &.bg-img {
+        background-size: contain;
+    }
+}
+.counterup-item {
+  .icon {
+    font-size: 40px;
+    color: $base-color;
+    width: 45px;
+    @media (max-width: 1399px) {
+      font-size: 35px;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+  .content {
+    width: calc(100% - 45px);
+    padding-left: 20px;
+    span {
+      font-weight: 600;
+      color: $secondary-color;
+      font-size: 40px;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      @media (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+.cta {
+    &.overlay-bg::before {
+        background-color: $base-color;
+        opacity: .9;
+    }
+    .cta-content .title {
+        max-width: 35ch;
+        margin: 0 auto;
+        font-size: 40px;
+        @media (max-width: 991px) {
+            font-size: 35px;
+        }
+        @media (max-width: 767px) {
+            font-size: 30px;
+        }
+        @media (max-width: 575px) {
+            font-size: 25px;
+        }
+      }
+}
+

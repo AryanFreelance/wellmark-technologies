@@ -1,0 +1,10 @@
+
+.fun-right-bg-img {
+    text-align: center;
+    &.bg-img {
+        background-size: contain;
+    }
+    img {
+        max-width: 100%;
+    }
+}

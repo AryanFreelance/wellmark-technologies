@@ -1,0 +1,115 @@
+
+// ============= Footer Start Here =======================
+.footer-area {
+    background-color: #222429;
+    border-top: 1px solid rgba(221, 221, 221, 0.123);
+}
+
+.social-icons {
+    margin: 0 -5px;
+    li {
+        padding: 0 5px;
+        a {
+            background-color: #34363A;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 15px;
+            &:hover, &.active {
+                background-color: $base-color;
+            }
+        }
+    }
+}
+
+.common-footer {
+    font-size: 24px;
+    color: $white;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 2px;
+        left: 0;
+        bottom: -2px;
+        background-color: rgba(221, 221, 221, 0.274);
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 2px;
+        left: 0;
+        bottom: -2px;
+        background-color: #df0e0e9f;
+    }
+}
+.footer-menu {
+    li {
+        display: block;
+        line-height: 2;
+         i {
+            font-size: 8px;
+            color: $base-color;
+            margin-right: 10px;
+            transform: translateY(-4px);
+        }
+        a {
+            color: white;
+            opacity: 80%;
+            font-size: 16px;
+            padding: 3px 0;
+            font-weight: 400;
+            &:hover {
+                color: $base-color;
+                margin-left: 4px;
+            }
+        }
+        
+    }
+}
+.footer-item {
+    .title {
+        color: $white;
+        font-size: 29px;
+        padding-bottom: 18px;
+        @media (max-width: 991px) {
+            font-size: 25px;
+        }
+        @media (max-width: 575px) {
+            font-size: 22px;
+        }
+        span {
+            color: $base-color;
+        }
+    }
+    .content {
+        color: #D3D3D4; 
+    }
+}
+.footer-item {
+    a img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .text {
+        color: #ddd;
+    }
+}
+// ============= Footer End Here =======================
+
+
+// ============= Bottom Footer End Here =======================
+.bottom-footer {
+    background-color: #2B2D32;
+    border-top: 1px solid #dddddd09;
+}
+
+// =============Bottom Footer End Here =======================

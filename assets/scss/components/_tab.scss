@@ -1,0 +1,35 @@
+// ================== Tab Content ============= 
+.custom--tab {
+    justify-content: center;
+    background: #07294d;
+    padding: 0;
+    border-radius: 6px;
+    li {
+        button {
+            color: $white;
+            padding: 13px 20px;
+            background-color: transparent !important;
+            border-right: 1px solid #dddddd61 !important;
+            transition: .4s;
+            border-bottom: 3px solid transparent !important;
+            @media (max-width: 1199px) {
+                padding: 12px 15px;
+            }
+            &.active {
+                color: $white;
+                border-bottom: 3px solid $base-color !important;
+                border-radius: 0;
+            }
+            &:hover {
+                color: $white;
+                border-bottom: 3px solid $base-color !important;
+                border-radius: 0;
+            }
+            
+        }
+    }
+}
+ul[class*="custom--tab"] li:last-child button {
+    border-right: none !important;
+}
+

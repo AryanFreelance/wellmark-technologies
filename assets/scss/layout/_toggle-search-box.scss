@@ -1,0 +1,234 @@
+
+// ---------------- Search Box -----------------
+.search-icon.close i::before {
+    content: "\f057";
+}
+.toggle-search-box {
+    position: relative;
+    order: 1;
+    margin-left: 10px;
+    @media (max-width: 991px) {
+        order: -1;
+        margin-left: auto;
+    }
+    .search-icon{
+        width: 20px;
+        cursor: pointer;
+        &.close span::before {
+            content: "\e94e";
+        }
+        span {
+            color: $secondary-color;
+        }
+        i {
+            color: $secondary-color;
+            display: inline-block;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    }
+    .search-input {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 300px;
+        background-color: $base-color;
+        padding: 10px;
+        border-radius: 3px;
+        margin-top: 15px;
+        transition: .3s;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 9;
+        @media (max-width: 575px) {
+            width: 250px;
+        }
+        @media (max-width: 425px) {
+            right: -100px;
+            width: 250px;
+        }
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 10px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            right: 4px;
+            top: -7px;
+            background-color: $base-color;
+            transform: rotate(44deg);
+            @media (max-width: 425px) {
+                right: 100px;
+            }
+        }
+        form{
+            position: relative;
+            input{
+                padding: 10px 35px 10px 10px;
+                border: 0;
+                width: 100% ;
+                border-radius: 5px;
+                color: #000;
+                font-weight: 400;
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $secondary-color;
+                    font-weight: 400;
+                }
+            }
+            button {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background-color: transparent;
+                color: $white;
+                font-weight: 500;
+                border-radius: 0px 5px 5px 0px;
+                color: $base-color;
+            }
+        } 
+    }
+}
+// ======================= Toggle Bars Start ====================
+.toggle-bar {
+    order: 2;
+    margin-left: 30px !important;
+    background-color: $base-color;
+    position: relative;
+    right: -18px;
+    position: relative;
+    @media (max-width: 991px) {
+        order: -1;
+        right: 0;
+        margin-left: 10px !important;
+        margin-right: 10px;
+    }
+    span {
+        color: #fff;
+        font-size: 35px;
+        cursor: pointer;
+        padding: 28px 40px;
+        @media (max-width: 991px) {
+            padding: 10px 0px;
+            font-size: 30px;
+        }
+        @media (max-width: 575px) {
+            padding: 7px 17px;
+            font-size: 25px;
+        }
+    }
+    .bar-icon {
+        width: 115px;
+        display: grid;
+        place-items: center;
+        @media (max-width: 991px) {
+            width: 60px;
+        }
+        @media (max-width: 575px) {
+            width: 50px;
+        }
+    }
+}
+
+.toggle-bar-content {
+    position: fixed;
+    right: -312px;
+    width: 312px;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 20px;
+    top: 44px;
+    z-index: 2;
+    box-shadow: 0 0px 20px 0px #eeeeee83;
+    transition: .4s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    @media (max-width: 991px) {
+        top: 0;
+    }
+    &.show {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        top: 44px;
+        @media (max-width: 991px) {
+            top: 0;
+        }
+    }
+    .toggler-logo{
+        @media (max-width: 1800px) {
+            margin-top: 50px;
+        }
+    }
+    .text {
+        padding-top: 20px;
+    }
+    .toggle-thumbs {
+        gap: 5px;
+        .gallery-popup {
+            width: 32%;
+            height: 80px;
+            overflow: hidden;
+            flex-shrink: 0;
+            aspect-ratio: 1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .title {
+        padding-top: 20px;
+        padding-bottom: 3px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .toggle-adress {
+        .contact {
+            padding-bottom: 10px;
+            i {
+                width: 25px;
+                color: $base-color;
+                font-size: 15px;
+            }
+            p {
+                width: calc(100% - 25px);
+            }
+        }
+        
+    }
+}
+
+
+.close-icon {
+    display: none;
+    @media (max-width: 1800px) {
+    visibility: visible;
+    opacity: 1;
+    background-color: $base-color;
+    display: inline;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    width: 50px;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+    
+}

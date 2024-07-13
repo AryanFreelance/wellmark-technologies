@@ -1,0 +1,30 @@
+.home-two-header {
+    &.header-bottom {
+        transform: translateY(0);
+        top: 0;
+    }
+    &.fixed-header {
+        position: fixed;
+    }
+    .toggle-search-box {
+       @media (max-width: 991px) {
+        .search-input {
+            @media (max-width: 425px) {
+                right: 0px;
+                width: 250px;
+            }
+            @media (max-width: 374px) {
+                right: -50px;
+            }
+            &::before {
+                @media (max-width: 425px) {
+                    right: 4px;
+                }
+                @media (max-width: 374px) {
+                    right: 55px;
+                }
+            }
+        }
+       }
+    }
+}

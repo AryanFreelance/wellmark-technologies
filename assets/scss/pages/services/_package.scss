@@ -1,0 +1,29 @@
+.package-features-item {
+  background-color: #fbfbfb;
+  padding: 50px;
+  @media (max-width: 767px) {
+      padding: 40px;
+  }
+  @media (max-width: 575px) {
+      padding: 30px;
+  }
+  .icon {
+    color: $base-color;
+    font-size: 40px;
+    background-color: $white;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px rgb(231, 231, 231);
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

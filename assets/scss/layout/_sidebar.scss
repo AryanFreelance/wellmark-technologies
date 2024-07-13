@@ -1,0 +1,183 @@
+// ============================================ Sidebar Css Start ============================================
+// =================================== Search Box ===================================
+.input-group {
+  input {
+    background-color: $secondary-color;
+    height: 70px;
+    border: none;
+    color: $white;
+    padding: 0 63px 0 25px;
+    &:focus {
+      background-color: $secondary-color;
+      color: $white;
+    }
+    &::placeholder {
+      color: #ebe9e9d6;
+    }
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 50px;
+    background-color: $base-color;
+    color: $white;
+    font-size: 20px;
+    z-index: 3;
+    transition: 0.3s;
+    &:hover {
+      background-color: $base-color;
+    }
+  }
+}
+// =================================== Sidebar Title ===================================
+.sidebar-title {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: $base-color;
+  }
+}
+// ======================================= Widgets =======================================
+.widget-list {
+  li {
+    display: block;
+    padding: 5px 0;
+    a {
+      display: block;
+      background-color: #fbfbfb;
+      padding: 24px;
+      border-left: 6px solid transparent;
+      color: $secondary-color;
+      @media (max-width: 991px) {
+        padding: 20px;
+      }
+      @media (max-width: 575px) {
+        padding: 15px;
+      }
+      &:hover, &.active {
+        border-left: 6px solid $secondary-color;
+        background-color: $base-color;
+        color: $white;
+      }
+    }
+  }
+}
+// ======================================= Pdf =======================================
+.sidebar-pdf {
+  background-color: $secondary-color;
+  padding: 0 0px 0px 20px;
+  .left {
+    padding: 15px 0;
+    position: relative;
+    .title {
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    .text {
+      color: #ddd;
+    }
+  }
+
+  .right {
+    position: absolute;
+    background-color: $base-color;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 71px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+}
+
+// ======================================= Latest Blog POst =======================================
+.post-item {
+  .thumb {
+    height: auto;
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  .content {
+    .title {
+      a {
+        font-weight: 500;
+        color: $secondary-color;
+        margin-bottom: 8px;
+        font-size: 16px;
+        @media (max-width: 575px) {
+          font-size: 16px;
+        }
+        &:hover {
+            color:$base-color;
+        }
+      }
+    }
+  }
+}
+.date-list {
+  margin: 0 -10px;
+  @media (max-width: 575px) {
+    margin: 0 -5px;
+  }
+  li {
+    padding: 0 10px;
+    @media (max-width: 575px) {
+      padding: 0 5px;
+    }
+    a {
+      color: $body-color;
+      font-size: 14px;
+      @media (max-width: 575px) {
+        font-size: 15px;
+      }
+      &:hover {
+        color: $base-color;
+      }
+      span {
+        color: $base-color;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+// ======================================= Sidebar Tags =======================================
+.sidebar-tags {
+  margin: -5px;
+  li {
+    padding: 5px;
+    a {
+        border: 1px solid #ddd;
+        color: $body-color;
+        padding: 8px 20px;
+        &:hover, &.active {
+            background-color: $base-color;
+            color: $white;
+            border-color: $base-color;
+          }
+      }
+  }
+}
+

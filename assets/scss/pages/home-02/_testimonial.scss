@@ -1,0 +1,148 @@
+.home-two-testimonial {
+  background-color: #222429;
+}
+.testimonial-thumbs {
+    padding-left: 30px;
+  img {
+      max-width: 100%;
+  }
+}
+
+.testi-slider {
+    padding: 0 20px;
+    @media (max-width: 400px) {
+        padding: 5px;
+    }
+  .testi-content {
+    padding: 0 15px;
+    .icon {
+      font-size: 60px;
+      color: $base-color;
+      margin-top: -20px;
+    }
+  }
+  .slick-arrow {
+    background-color: $white;
+    color: $base-color;
+    width: 45px;
+    height: 45px;
+    top: auto;
+    bottom: 0 !important;
+    @media (max-width: 991px) {
+        margin-top: -43px;
+    }
+    &:hover {
+        color: $white;
+        background-color: $base-color;
+    }
+    &.slick-next {
+        right: 75px;
+        @media (max-width: 575px) {
+          right: 70px;
+        }
+    }
+    &.slick-prev {
+        right: 19px;
+    }
+}
+}
+.client-meta {
+    .meta-thumb {
+        width: 65px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      
+      .meta-content {
+        width: calc(100% - 65px);
+        padding-left: 20px;
+        .name{
+            font-weight: 500;
+            color: #F2F2F2;
+        }
+        .designation {
+            color: #F2F2F2;
+            font-weight: 300;
+            font-size: 15px;
+        }
+      }
+}
+
+
+// Testimonails Right Css
+.testimonial-right {
+  background-color: #c61e1e;
+  .right-item {
+    padding: 54px 40px;
+    @media (max-width: 1199px) {
+        padding: 40px 35px;
+    }
+    @media (max-width: 767px) {
+        padding: 30px 30;
+    }
+    @media (max-width: 575px) {
+        padding: 25px 20px;
+    }
+    @media (max-width: 400px) {
+        padding: 20px 10px;
+    }
+    &:nth-child(even) {
+      background-color: $base-color;
+    }
+    .icon {
+      background-color: #222429;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 991px) {
+        width: 55px;
+        height: 55px;
+      }
+      @media (max-width: 767px) {
+        width: 50px;
+        height: 50px;
+      }
+      img {
+        width: 34px;
+        
+      @media (max-width: 767px) {
+        width: 30px;
+      }
+      }
+    }
+    .content {
+      width: calc(100% - 60px);
+      padding-left: 30px;
+      @media (max-width: 575px) {
+        padding-left: 15px;
+      }
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        @media (max-width: 575px) {
+            font-size: 20px;
+        }
+      }
+      .para {
+        max-width: 390px;
+        @media (max-width: 991px) {
+          max-width: 100%;
+      }
+      }
+      .btn--base-two {
+        color: $white;
+        &:hover {
+          i {
+            &:last-child {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

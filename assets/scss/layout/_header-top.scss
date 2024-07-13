@@ -1,0 +1,137 @@
+
+// ================ Top Header Start Here ================
+.header-top{
+    background-color:$secondary-color;
+    padding: 20px 0 60px;
+}
+
+.top-contact-menu {
+    margin: 0 -15px;
+    .item {
+        padding: 0 15px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        span{
+            font-size: 16px;
+            color: $white;
+            margin-right: 5px;
+        }
+        p {
+            color: $white;
+            margin-left: 3px;
+            font-size: 15px;
+            display: inline-block;
+            font-weight: 400;
+        }
+        a{
+            color: $white;
+            margin-left: 3px;
+            font-size: 15px;
+            &:hover{
+                color: $base-color;
+            }
+        }
+    }
+}
+.top-button {
+    @media (max-width: 991px) {
+        padding-bottom: 15px;
+    }
+}
+
+.select-language {
+    width: 85px;
+        position: relative;
+        z-index: 1;
+        .form-select {
+            background-color: transparent;
+            color: $white;
+            background-image: none;
+            padding: 5px 13px;
+            border: none;
+            &:focus {
+                box-shadow: none;
+                border-color: $base-color;
+            }
+            option {
+                background: $secondary-color;
+                color: $white;
+            }
+        }
+        &::before {
+            position: absolute;
+            font-family: "FontAwesome";
+            font-weight: 400;
+            // content: "\f0d8";
+            content: "\f0dd";
+            position: absolute;
+            right: 2px;
+            top: 40%;
+            z-index: 1;
+            transform: translateY(-50%);
+            color: $white;
+            font-size: 14px;
+            z-index: -1;
+        }
+}
+.form-select.mobile-version {
+    @media (max-width: 991px) {
+        width: auto;
+        font-weight: 500;
+        position: relative;
+        font-size: 15px;
+        border: none;
+        background-color: $base-color !important;
+        color: $white;
+        appearance: revert;
+        background-image: none;
+        padding: 8px 15px;
+        &:focus {
+            box-shadow: none;
+            border-color: $base-color;
+        }
+        option {
+            background: $secondary-color;
+            color: $white;
+        }
+    }
+}
+// Login Registration
+.login-registration {
+    // width: calc(100% - 85px);
+    padding-left: 20px;
+    @media (max-width: 991px) {
+        padding-left: 0px;
+    }
+    li {
+        color: $white;
+        padding: 0 3px;
+        @media (max-width: 991px) {
+            color: $secondary-color;
+        }
+        span {
+           font-size: 16px; 
+           color: $white;
+           @media (max-width: 991px) {
+            color: $secondary-color;
+            }
+        }
+        a {
+            color: $white;
+            font-weight: 400;
+            font-size: 14px;
+            @media (max-width: 991px) {
+                color: $secondary-color;
+            }
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
+// In mobile version
+.nav-item .login-registration li a:hover {
+    color: $base-color;
+}
+// ================ Top Header End Here ================

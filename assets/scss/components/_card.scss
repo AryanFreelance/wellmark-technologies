@@ -1,0 +1,28 @@
+
+.custom--card {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 14px 0px #ddddddd5;
+    box-shadow: 0px 0px 14px 0px #dddddd96;
+    background: #f6f6f6 !important;
+    border: transparent;
+    &:hover {
+        box-shadow: 0px 0px 24px 0px #d7d7d7bb;
+    }
+    .card-body {
+        text-align: center;
+        background-color: $white;
+        text-align: center;
+        padding: 30px;
+        border-radius: 5px;
+        i {
+            font-size: 26px;
+            color: rgba(104, 51, 153, 0.788);
+        }
+    }
+    .card-title {
+        color: $secondary-color; 
+        font-size: 25px;
+    }
+}
+

@@ -1,0 +1,27 @@
+
+.footprint {
+    .section-header {
+        margin-bottom: 20px;
+        .para {
+            max-width: 420px;
+            @media (max-width: 991px) {
+                max-width: 100%;
+              }
+        }
+    }
+    .footprint-contact {
+        .contact {
+            font-size: 17px;
+          }
+          .phone {
+            color: $base-color;
+            font-weight: 500;
+            font-size: 18px;
+          }
+    }
+    .footprint-map {
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+
+// ====================== Breadcumb Css Start ====================
+.breadcumb {
+    padding: 200px 0 105px;
+    margin-top: -47px;
+    @media (max-width: 991px) {
+        padding: 120px 0 70px;
+    }
+    @media (max-width: 767px) {
+        padding: 100px 0 50px;
+    }
+    @media (max-width: 575px) {
+        padding: 90px 0 40px;
+    }
+} 
+.breadcumb-section {
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        background-color: $secondary-color;
+        opacity: .8;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.breadcumb-title {
+    font-size: 60px;
+    padding: 0px 0 10px;
+    @media (max-width: 1399px) {
+        font-size: 55px;
+    }
+    @media (max-width: 991px) {
+        font-size: 45px;
+    }
+    @media (max-width: 767px) {
+        font-size: 40px;
+    }
+    @media (max-width: 575px) {
+        font-size: 30px;
+    }
+}
+.breadcumb-list {
+    li {
+        color: $base-color;
+        padding: 0 5px;
+        font-weight: 400;
+        font-size: 16px;
+        span {
+            color: $white;
+        }
+        @media (max-width: 575px) {
+            font-size: 15px;
+        }
+        i {
+            color: $white;
+        }
+        a {
+            color: $white;
+            font-weight: 500;
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
+// ====================== Breadcumb Css End ====================

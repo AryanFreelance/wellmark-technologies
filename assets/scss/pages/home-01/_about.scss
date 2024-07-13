@@ -1,0 +1,121 @@
+
+    
+.about-left-thumb {
+    height: 100%;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.about-right-thumb {
+    position: relative;
+    max-height: 490px;
+    img {
+        &:first-child {
+            width: 58px;
+            height: 200px;
+            object-fit: cover;
+            @media (max-width: 1199px) {
+                height: 264px;
+            }
+            @media (max-width: 991px) {
+                height: auto;
+            }
+        }
+        &:nth-child(2) {
+            margin-top: 0px;
+            z-index: 1;
+            position: relative;
+            width: 270px !important;
+            height: 254px;
+            object-fit: cover;
+            @media (max-width: 1199px) {
+                margin-left: 0;
+                width: 100% !important;
+                height: auto;
+            }
+            @media (max-width: 575px) {
+                display: none;
+            }
+        }
+        &:last-child {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            transform: translateY(-183px);
+
+            @media (max-width: 1199px) {
+                // bottom: -80px;
+            }
+            @media (max-width: 1199px) {
+                display: none;
+            }
+        }
+    }
+}
+
+// about right
+.about-right-content {
+    .para {
+        max-width: 370px;
+        margin-top: -8px;
+        @media (max-width: 1199px) {
+            max-width: 100%;
+        }
+    }
+    .section-header {
+        @media (max-width: 1199px) {
+            margin-bottom: 15px;
+        }
+    }
+}
+.about-client {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #F2F2F2;
+    padding-top: 44px;
+    margin-top: 44px;
+    @media (max-width: 1199px) {
+        padding-top: 25px;
+        margin-top: 25px;
+    }
+    @media (max-width: 575px) {
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+    .about-meta {
+        width: 200px;
+        @media (max-width: 475px) {
+            width: 100%;
+        }
+        .meta-thumb {
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+            }
+        }
+        .meta-content {
+            padding-left: 25px;
+            @media (max-width: 575px) {
+                padding-left: 15px;
+            }
+            .name {
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .about-button {
+        width: calc(100% - 200px); 
+        padding-left: 20px;
+        @media (max-width: 475px) {
+            width: 100%;
+            padding-left: 0px;
+            padding-top: 15px;
+        }
+    }
+}
+

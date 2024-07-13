@@ -1,0 +1,27 @@
+// Custom Badge
+.badge {
+    &.bg--primary {
+        background-color: $primary;
+        color: $white;
+    }
+    &.bg--secondary {
+        background-color: $secondary;
+        color: $white;
+    }
+    &.bg--success {
+        background-color: $success;
+        color: $white;
+    }
+    &.bg--danger {
+        background-color: $danger;
+        color: $white;
+    }
+    &.bg--warning {
+        background-color: $warning;
+        color: $white;
+    }
+    &.bg--info {
+        background-color: $info;
+        color: $white;
+    }
+}

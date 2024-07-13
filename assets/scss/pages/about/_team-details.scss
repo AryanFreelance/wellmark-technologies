@@ -1,0 +1,92 @@
+.team-details {
+  .team-item {
+    padding: 0 20px 0 0;
+    position: sticky;
+    top: 100px;
+    @media (max-width: 991px) {
+      padding: 0 0px;
+      top: 75px;
+    }
+    &:hover .content{
+      background-color: #fbfbfb;
+          .name, .name a, .designation  {
+              color: $secondary-color;
+          }
+      }  
+    .thumb {
+      img {
+        max-height: 570px;
+        object-fit: cover;
+      }
+    }
+  }
+  .contact-address {
+    margin-bottom: 0px;
+    .icon {
+      width: 45px;
+    }
+    .content {
+      width: calc(100% - 45px);
+      padding-left: 15px;
+      @media (max-width: 575px) {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.team-member-data {
+  background-color: #df0e0e0a;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 8px solid $base-color;
+  @media (max-width: 991px) {
+    padding: 12px;
+  }
+  @media (max-width: 575px) {
+    border-left: 0px solid $secondary-color;
+  }
+  .highlighted {
+    font-size: 17px;
+    color: $secondary-color;
+    font-weight: 600;
+  }
+}
+.team-cmn-title {
+  font-size: 28px;
+  margin-bottom: 17px;
+  @media (max-width: 991px) {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 575px) {
+    margin-bottom: 10px;
+  }
+}
+
+// ========================= Working Experience And Skills ==============================
+.member-experience-skills div[class*="experience-skill"]:last-child {
+  padding-bottom: 0px;
+}
+
+.experience-skill {
+  padding-bottom: 20px;
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .para {
+      font-weight: 400;
+  }
+  .progress {
+      height: 18px;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 5px !important;
+    .progress-bar {
+        background-color: $base-color;
+        font-weight: 500;
+        font-size: 15px;
+    }
+  }
+}

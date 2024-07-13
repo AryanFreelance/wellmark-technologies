@@ -1,0 +1,32 @@
+
+// ===================== Scroll to Top Start =================================
+.scroll-top {
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    color: $white;
+    background-color: $base-color;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 16px;
+    z-index: 5;
+    transition: .5s;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 210px;
+    &:hover {
+        color: $white;
+        background-color: $secondary-color;
+    }
+    &.show{
+        visibility: visible;
+        opacity: 1;
+        bottom: 30px;
+    }
+}
+// ===================== Scroll to Top End =================================

@@ -1,0 +1,183 @@
+.blog-details {
+  .blog-item {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .blog-details-list {
+    li {
+      color: $body-color;
+      span {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.blog-details-list {
+  li {
+    margin-bottom: 30px;
+    span {
+      width: 35px;
+      color: $base-color;
+    }
+    p {
+      width: calc(100% - 35px);
+      margin-top: -7px;
+    }
+  }
+}
+
+// =================== Testimonails Of blog Details====================
+.details-testimonail {
+  .icon {
+    width: 70px;
+    font-size: 60px;
+    color: $base-color;
+    @media (max-width: 575px) {
+      width: 100%; 
+      text-align: center;
+    }
+  }
+  .content {
+    width: calc(100% - 70px);
+    padding-left: 25px !important;
+    @media (max-width: 575px) {
+      width: 100%; 
+      padding-left: 0px !important;
+    }
+    .text {
+      font-weight: 500;
+      color: $secondary-color;
+      margin-bottom: 30px;
+      font-size: 18px;
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+    .name {
+      position: relative;
+      color: $secondary-color;
+      font-weight: 500;
+      padding-left: 80px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 2px;
+        left: 0;
+        top: 50%;
+        background-color: $base-color;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// ============================== Socail SHare ==============================
+.details-socail-share {
+    .social-name {
+        ul {
+            margin: 0 -5px;
+            li {
+                padding: 0 5px;
+                a {
+                    border: 1px solid #1b28213b;
+                    color: $body-color; 
+                    background-color: #fbfbfb;
+                    padding: 8px 20px;
+                    border-radius: 4px;
+                    &:hover {
+                        color: $white;
+                        background-color: $base-color;
+                        border-color: $base-color;
+                      }
+                  }
+              }
+          }
+    }
+    .social-icons {
+        li {
+            a {
+                background-color: #fbfbfb;
+                color: $body-color;
+                &:hover, &.active {
+                    color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+// ====================== Comments Start ====================================
+.comment-thumb {
+    width: 80px;
+    @media (max-width: 767px) {
+        width: 60px;
+        height: auto;
+    }
+}
+.comment-content {
+    width: calc(100% - 80px);
+    padding-left: 15px;
+    padding-bottom: 0px;
+    @media (max-width: 575px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    .name {
+        font-size: 20px;
+        margin-bottom: 5px;
+        @media (max-width: 767px) {
+            font-size: 17px;
+        }
+    }
+    .time {
+        i {
+          color: $base-color;
+          font-size: 15px;
+          margin-right: 5px;
+        }
+    }
+    a{
+        font-weight: 500;
+        color: $body-color;
+        margin-bottom: 20px;
+        &:hover {
+          color: $base-color;
+        }
+        i {
+          font-size: 11px;
+        }
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+}
+.comments-wrapper{
+    .comment-list {
+        padding-bottom: 15px;
+        @media (max-width: 767px) {
+          padding-bottom: 15px;
+        }
+        @media (max-width: 575px) {
+          padding-bottom: 10px;
+        }
+        &:last-child .comment-content{
+            border-bottom: none;
+         }
+    }
+    .comments-wrapper {
+        padding-left: 70px;
+        padding-top: 30px;
+        @media (max-width: 575px) {
+            padding-left: 40px;
+        }
+    }
+}
+// ====================== Comments End ====================================
+
+
+
+

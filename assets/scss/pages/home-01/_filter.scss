@@ -1,0 +1,88 @@
+// ============= Filter End Here =======================
+.filter {
+    // position: relative;
+    padding: 60px 30px;
+    z-index: 2;
+    background-color: $secondary-color;
+    @media (max-width: 575px) {
+        padding: 40px 20px;
+    }
+    @media (max-width: 450px) {
+        padding: 40px 0px;
+    }
+}
+  .filter-item {
+    position: relative;
+  }
+  .filter-icon i {
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    pointer-events: none;
+    z-index: 1;
+    color: $base-color;
+}
+  
+  .filter-select {
+    height: 50px;
+    position: relative;
+    padding-left: 50px;
+    &:focus {
+        box-shadow: none;
+      }
+  }
+// ============= Filter End Here =======================
+  
+// html Markup
+// <div class="filter">
+//    <div class="container">
+//         <form action="" class="">
+//             <div class="row justify-content-center">
+//                 <div class="col-lg-4 mb-3 mb-lg-0">
+//                     <div class="filter-item">
+//                         <div class="filter-icon">
+//                             <i class=" fas fa-map-marker-alt"></i>
+//                         </div>
+//                         <select class="form-select filter-select w-100" aria-label="Default select example">
+//                             <option selected="">Event Location</option>
+//                             <option value="1">Dhaka</option>
+//                             <option value="2">Chittagong</option>
+//                             <option value="3">Rajshahi</option>
+//                             <option value="3">Khulna</option>
+//                             <option value="3">Sylhet</option>
+//                           </select>
+//                     </div>
+//                 </div>
+//                 <div class="col-lg-4 mb-3 mb-lg-0">
+//                     <div class="filter-item">
+//                         <div class="filter-icon">
+//                             <i class="fab fa-buffer"></i>
+//                         </div>
+//                         <select class="form-select filter-select w-100" aria-label="Default select example">
+//                             <option selected="">Event Category</option>
+//                             <option value="1">Music</option>
+//                             <option value="2">Lectures & Books</option>
+//                             <option value="3">Food & Drink</option>
+//                             <option value="3">Fashion</option>
+//                             <option value="3">Festivals & Fairs</option>
+//                             <option value="3">Visual Arts</option>
+//                           </select>
+//                     </div>
+//                 </div>
+//                 <div class="col-lg-4">
+//                     <div class="filter-item">
+//                         <a href="search.html" class="cmn-btn base-color w-100" type="submit">Search</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </form>
+//    </div>
+// </div>
