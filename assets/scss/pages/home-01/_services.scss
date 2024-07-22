@@ -1,137 +1,134 @@
-
 .services-item {
-    background-color: #FBFBFB;
-    text-align: left;
-    padding: 35px;
+  background-color: #fbfbfb;
+  border: 2px solid #000;
+  text-align: left;
+  padding: 35px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  @media (max-width: 991px) {
+    padding: 30px;
+  }
+  @media (max-width: 575px) {
+    padding: 25px;
+  }
+  .background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background-color: $secondary-color;
+      opacity: 0.7;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: 0.7s ease-in-out;
+    }
+  }
+  &:hover .background-img {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover .title,
+  &:hover .para {
+    color: $white;
+  }
+  &:hover {
+    .btn--base-two {
+      color: $base-color;
+    }
+  }
+  .icon {
+    margin-bottom: 25px;
+    display: inline-block;
     position: relative;
-    z-index: 1;
-    transition: .3s;
-    @media (max-width: 991px) {
-        padding: 30px;
+    overflow: hidden;
+    isolation: isolate;
+    font-size: 40px;
+    color: $base-color;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 33px rgba(0, 0, 0, 0.08);
+    background-color: $white;
+    transition: 0.3s;
+    display: grid;
+    place-items: center;
+    margin-right: auto;
+    @media (max-width: 1199px) {
+      font-size: 30px;
+      width: 60px;
+      height: 60px;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+      width: 55px;
+      height: 55px;
     }
     @media (max-width: 575px) {
-        padding: 25px;
+      font-size: 25px;
+      width: 50px;
+      height: 50px;
     }
-    .background-img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        visibility: hidden;
-        opacity: 0;
-        transition: .7s ease-in-out;
-        img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
-        &::before {
-            position: absolute;
-            content: "";
-            left: 0;
-            top: 0;
-            background-color: $secondary-color;
-            opacity: .7;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            transition: .7s ease-in-out;
-        }
-    }
-    &:hover .background-img{
-        visibility: visible;
-        opacity: 1;
-    }
-    &:hover .title,  &:hover .para {
-        color: $white;
-    }
-    &:hover {
-        .btn--base-two {
-            color: $base-color;
-        }
-    }
+    // clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  }
+  &:hover {
     .icon {
-        margin-bottom: 25px;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-        font-size: 40px;
-        color: $base-color;
-        width: 70px;
-        height: 70px;
-        border-radius: 5px;
-        box-shadow: 1px 0px 33px rgba(0, 0, 0, 0.08);
-        background-color: $white;
-        transition: .3s;
-        display: grid;
-        place-items: center;
-        margin-right: auto;
-        @media (max-width: 1199px) {
-            font-size:30px;
-            width: 60px;
-            height: 60px;
-        }
-        @media (max-width: 767px) {
-            font-size:30px;
-            width: 55px;
-            height: 55px;
-        }
-        @media (max-width: 575px) {
-            font-size: 25px;
-            width: 50px;
-            height: 50px;
-        }
-        // clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      background-color: $base-color;
+      color: $white;
+      &::before {
+        position: absolute;
+        content: "";
+        left: -60px;
+        top: -10px;
+        background-color: #fb7d7d;
+        opacity: 0.7;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: -1;
+        transition: 0.3s;
+      }
+      &::after {
+        right: -60px;
+        top: 22px;
+        position: absolute;
+        content: "";
+        background-color: #fb7d7d;
+        opacity: 0.7;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        z-index: -1;
+        transition: 0.3s;
+      }
     }
-    &:hover {
-        .icon {
-            background-color: $base-color;
-            color: $white;
-            &::before {
-                position: absolute;
-                content: "";
-                left: -60px;
-                top: -10px;
-                background-color: #FB7D7D;
-                opacity: .7;
-                border-radius: 50%;
-                width: 80px;
-                height: 80px;
-                z-index: -1;
-                transition: .3s;
-            }
-            &::after {
-                right: -60px;
-                top: 22px;
-                position: absolute;
-                content: "";
-                background-color: #FB7D7D;
-                opacity: .7;
-                border-radius: 50%;
-                width: 80px;
-                height: 80px;
-                z-index: -1;
-                transition: .3s;
-            }
-        }
-    }
-    .title {
-        margin-bottom: 12px;
-        font-size: 24px;
-    }
-    .para {
-        padding-bottom: 15px;
-        letter-spacing: .8px;
-    }
-    .btn--base-two {
-        color: #777777;
-        font-weight: 500;
-    }
+  }
+  .title {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+  .para {
+    padding-bottom: 15px;
+    letter-spacing: 0.8px;
+  }
+  .btn--base-two {
+    color: #777777;
+    font-weight: 500;
+  }
 }
-
-
-
-
