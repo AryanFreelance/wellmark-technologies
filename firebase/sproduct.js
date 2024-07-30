@@ -26,7 +26,7 @@ function getCategoryIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
   console.log(params.get("id"));
   console.log(params.get("category"));
-  return params.get("id");
+  return { id: params.get("id"), category: params.get("category") };
 }
 
 // Function to display the product details
@@ -35,47 +35,64 @@ function displayProductDetails(product) {
   productHeading.innerText = product.title;
   const productTitle = document.getElementById("product-title");
   productTitle.innerText = product.title;
-  const productDetail = document.getElementById("category-product");
+  const productDescription = document.getElementById("sproduct-description");
+  productDescription.innerText = product.description;
+  const productImage = document.getElementById("sproduct-image");
+  productImage.src = product.image;
+  const productBrochure = document.getElementById("sproduct-brochure");
+  productBrochure.href = product.pdf;
+  // const productDetail = document.getElementById("category-product");
 
-  product.prod.forEach((sproduct) => {
-    const productItem = document.createElement("div");
-    productItem.classList.add("col-lg-4", "col-md-6");
-    productItem.innerHTML = `
-        <div class="services-item">
-          <div class="background-img">
-            <img
-              src="../assets/images/products/olt/sy-gpon-16olt.webp"
-              alt=""
-            />
-          </div>
-          <!-- <div class="icon"><span class="icon-idea"></span></div> -->
-          <h4 class="title">${sproduct.title}</h4>
-          <p class="para">
-            ${sproduct.description}
-          </p>
-          <a href="../../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base-two style-two">
-            <i class="fas fa-circle"></i>Shop OLT<i class="fas fa-circle"></i
-          ></a>
-        </div>
-      `;
-    productDetail.appendChild(productItem);
-  });
+  // product.prod.forEach((sproduct) => {
+  //   const productItem = document.createElement("div");
+  //   productItem.classList.add("col-lg-4", "col-md-6");
+  //   productItem.innerHTML = `
+  //       <div class="services-item">
+  //         <div class="background-img">
+  //           <img
+  //             src="../assets/images/products/olt/sy-gpon-16olt.webp"
+  //             alt=""
+  //           />
+  //         </div>
+  //         <!-- <div class="icon"><span class="icon-idea"></span></div> -->
+  //         <h4 class="title">${sproduct.title}</h4>
+  //         <p class="para">
+  //           ${sproduct.description}
+  //         </p>
+  //         <a href="../../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base-two style-two">
+  //           <i class="fas fa-circle"></i>Shop OLT<i class="fas fa-circle"></i
+  //         ></a>
+  //       </div>
+  //     `;
+  //   productDetail.appendChild(productItem);
+  // });
 }
 
 // Fetch product details on page load
 async function fetchProductDetails() {
-  const categoryId = getCategoryIdFromUrl();
-  console.log("CATEGORY ID", categoryId);
-  const productRef = ref(db, `products/${categoryId}`);
+  const { id, category } = getCategoryIdFromUrl();
+  console.log("CATEGORY ID", category);
+  const productRef = ref(db, `products/${category}`);
   const snapshot = await get(productRef);
-  let title = "";
+  // let title = "";
   if (snapshot.exists()) {
     const product = snapshot.val();
-    console.log("PRODYCTS", product);
-    displayProductDetails(product);
-    title = `${product.title} | Wellmark Technoogies | Distributors & Partners`;
+    const categoryLinkWrapper = document.getElementById("sproduct-category");
+    categoryLinkWrapper.innerHTML = "";
+    const categoryLink = document.createElement("a");
+    categoryLink.href = `../products/products.html?id=${category}`;
+    categoryLink.innerText = product.title;
+    categoryLinkWrapper.appendChild(categoryLink);
+    // Get the product with the given id with the matching id from the prduct array
+    const sproduct = product.prod.find((prod) => prod.id === id);
+    console.log("SPRODUCT", sproduct);
+    // console.log("PRODYCTS", product);
+    const productName = document.getElementById("sproduct-name");
+    productName.innerText = sproduct.title;
+    displayProductDetails(sproduct);
+    title = `${sproduct.title} | Wellmark Technoogies | Distributors & Partners`;
   } else {
-    document.getElementById("product-detail").innerText = "Product not found";
+    document.getElementById("sproduct-title").innerText = "Product not found";
     title = "Not found | Wellmark Technologies | Distributors & Partners";
   }
   document.title = title;

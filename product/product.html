@@ -153,101 +153,6 @@
     </header>
     <!-- ==================== Bottom Header End Here ==================== -->
 
-    <!-- ==================== Toggler bar STart Here ==================== -->
-    <!-- <section>
-      <div class="toggle-bar-content">
-        <button class="close-icon">
-          <i class="fas fa-times"></i>
-        </button>
-        <a class="toggler-logo" href="index.html">
-          <img src="assets/images/home-01/logo/logo.png" alt=""
-        /></a>
-        <p class="text">
-          Rorem ipsum dolor sit amet, consectet adipiscing elit. Ut elit
-          tellusuctus
-        </p>
-        <h6 class="title">PHOTO GALLERY</h6>
-        <div
-          class="toggle-thumbs d-flex align-items-center flex-wrap justify-content-between"
-        >
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-01.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-01.png"
-              alt=""
-          /></a>
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-02.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-02.png"
-              alt=""
-          /></a>
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-03.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-03.png"
-              alt=""
-          /></a>
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-04.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-04.png"
-              alt=""
-          /></a>
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-05.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-05.png"
-              alt=""
-          /></a>
-          <a
-            class="gallery-popup"
-            href="assets/images/home-01/toggle-bar/toggle-img-06.png"
-            ><img
-              src="assets/images/home-01/toggle-bar/toggle-img-06.png"
-              alt=""
-          /></a>
-        </div>
-        <h6 class="title">CONTACT WITH US</h6>
-        <div class="toggle-adress">
-          <div class="contact d-flex flex-wrap align-items-center">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>8502 Proston Rd. London</p>
-          </div>
-          <div class="contact d-flex flex-wrap align-items-center">
-            <i class="fas fa-envelope"></i>
-            <p>demo123@gmail.com</p>
-          </div>
-          <div class="contact d-flex flex-wrap align-items-center">
-            <i class="fas fa-phone"></i>
-            <p>000 - 5555 - 8888</p>
-          </div>
-        </div>
-        <div class="toggle-social-icons pt-3">
-          <ul class="social-icons d-flex align-items-center flex-wrap">
-            <li>
-              <a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-    <!-- ==================== Toggler bar End Here ==================== -->
-
     <!-- ==================== Beadcumb Start Here ==================== -->
     <section
       class="breadcumb bg-img overlay-bg py-80"
@@ -257,8 +162,11 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="breadcumb-content">
-              <h4 class="breadcumb-title text-center text-white">
-                SY-GPON-16 OLT
+              <h4
+                class="breadcumb-title text-center text-white"
+                id="product-heading"
+              >
+                PRODUCT NAME
               </h4>
               <ul
                 class="breadcumb-list d-flex justify-content-center align-items-center"
@@ -267,9 +175,9 @@
                 <li><span>/</span></li>
                 <li><a href="../products.html">PRODUCTS</a></li>
                 <li><span>/</span></li>
-                <li><a href="../products/products.html?id=olt">OLT</a></li>
+                <li id="sproduct-category"><a>CATEGORY</a></li>
                 <li><span>/</span></li>
-                <li>SY-GPON-16</li>
+                <li id="sproduct-name">PRODUCT NAME</li>
               </ul>
             </div>
           </div>
@@ -285,24 +193,14 @@
           <div class="col-lg-8">
             <div class="services-details-content">
               <div class="details-thumb">
-                <img
-                  src="../assets/images/product/sy-gpon-16olt/SY-GPON-16OLT.png"
-                  alt=""
-                />
+                <img src="" alt="Product Image" id="sproduct-image" />
               </div>
               <div class="title-para mt-3 mb-4">
-                <h3 class="details-title">ABOUT SATELLITE TV</h3>
-                <p class="details-para">
-                  Web-based HD recordings, gaming, and downloading enormous
-                  documents gobble up the most transfer speed. To accomplish a
-                  practically consistent involvement in less slack, you might
-                  need to consider speed plans of 100 Mbps or more. For any
-                  remaining exercises like web-based music, surfing, and video
-                  conferencing - - anything over 25 Mbps ought to be sufficient.
-                  Everything relies heavily on how patient you are with
-                  potential buffering and somewhat more slow rates when others
-                  at home are seeking data transfer capacity simultaneously for
-                  their own exercises.
+                <h3 class="details-title">
+                  ABOUT <span id="product-title">PRODUCT NAME</span>
+                </h3>
+                <p class="details-para" id="sproduct-description">
+                  Product Description goes here...
                 </p>
               </div>
               <!-- <div class="row mb-4 g-4"> -->
@@ -367,15 +265,16 @@
             <div class="details-sidebar ps-xl-5">
               <div class="sidebar-pdf mt-4">
                 <div class="left">
-                  <span class="title">Download Brochure</span>
-                  <p class="text">PDF</p>
-                  <div class="right">
-                    <span class="icon-pdf"
-                      ><span class="path1"></span><span class="path2"></span
-                      ><span class="path3"></span><span class="path4"></span
-                      ><span class="path5"></span><span class="path6"></span
-                    ></span>
-                  </div>
+                  <a href="#" id="sproduct-brochure" download target="_blank"
+                    ><span class="title">Download Brochure</span>
+                    <p class="text">PDF</p>
+                    <div class="right">
+                      <span class="icon-pdf"
+                        ><span class="path1"></span><span class="path2"></span
+                        ><span class="path3"></span><span class="path4"></span
+                        ><span class="path5"></span><span class="path6"></span
+                      ></span></div
+                  ></a>
                 </div>
               </div>
               <!-- <div class="sidebar-widget pb-4">

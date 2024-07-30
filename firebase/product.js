@@ -43,7 +43,7 @@ function displayProductDetails(product) {
         <div class="services-item">
           <div class="background-img">
             <img
-              src="../assets/images/products/olt/sy-gpon-16olt.webp"
+              src="${sproduct.image}"
               alt=""
             />
           </div>

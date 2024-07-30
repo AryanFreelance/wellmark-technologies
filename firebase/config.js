@@ -32,7 +32,7 @@ function displayProducts(products) {
         <div class="services-item">
           <div class="background-img">
             <img
-              src="assets/images/products/olt/sy-gpon-16olt.webp"
+              src="${product.image}"
               alt=""
             />
           </div>
