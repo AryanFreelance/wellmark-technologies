@@ -51,7 +51,7 @@ function displayProductDetails(product) {
           <p class="para">
             ${sproduct.description}
           </p>
-          <a href="../../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base-two style-two">
+          <a href="../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base-two style-two">
             <i class="fas fa-circle"></i>Shop OLT<i class="fas fa-circle"></i
           ></a>
         </div>
