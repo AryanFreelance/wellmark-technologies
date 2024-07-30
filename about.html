@@ -41,23 +41,21 @@
               class="top-contact-menu d-flex flex-wrap justify-content-between align-items-center"
             >
               <li class="item">
-                <span class="icon-pin"></span>
-                <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                <span class="icon-mail"></span>
+                <a href="mailto:info@wellmark.co.in">info@wellmark.co.in</a>
               </li>
               <li class="item">|</li>
               <li class="item">
-                <span class="icon-mail"></span>
-                <a href="mailto:">info123@gmail.com</a>
+                <span class="icon-phone-call"></span>
+                <a href="tel:+918108107343">+91 8108107343</a>
+              </li>
+              <li class="item">|</li>
+              <li class="item">
+                <span class="icon-phone-call"></span>
+                <a href="tel:+918108107346">+91 8108107346</a>
               </li>
             </ul>
           </div>
-          <!-- <div class="top-button d-flex flex-wrap justify-content-between align-items-center">
-                <ul class="login-registration d-flex flex-wrap justify-content-between align-items-center">
-                    <li><a href="login.html"><span class="icon-user-1"></span> Login</a></li>
-                    <li>/</li>
-                    <li><a href="registration.html">Register</a></li>
-                </ul>
-            </div> -->
         </div>
       </div>
     </div>
@@ -83,39 +81,8 @@
               >
                 <i class="fa-solid fa-bars"></i>
               </button>
-
-              <!-- <div class="toggle-search-box">
-                <div class="search-icon">
-                  <span class="icon-search"></span>
-                </div>
-                <div class="search-input">
-                  <form>
-                    <input type="text" placeholder="Search..." />
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div> -->
-
-              <!-- <div class="toggle-bar">
-                <div class="bar-icon">
-                  <span class="icon-paragraph"></span>
-                </div>
-              </div> -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-menu ms-auto">
-                  <!-- <li class="nav-item d-block d-lg-none">
-                    <ul
-                      class="login-registration d-flex flex-wrap align-items-center justify-content-start"
-                    >
-                      <li>
-                        <a href="login.html"
-                          ><span class="icon-user-1"></span> Login</a
-                        >
-                      </li>
-                      <li>|</li>
-                      <li><a href="registration.html">Registration</a></li>
-                    </ul>
-                  </li> -->
                   <li class="nav-item">
                     <a
                       class="nav-link"
@@ -124,18 +91,7 @@
                       aria-expanded="false"
                     >
                       HOME
-                      <!-- <i class="fa-solid fa-angle-down"></i> -->
                     </a>
-                    <!-- <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="index.html">HOME 01</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="home-two.html"
-                          >HOME 02</a
-                        >
-                      </li>
-                    </ul> -->
                   </li>
                   <li class="nav-item">
                     <a
@@ -169,67 +125,13 @@
                     ></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="services-details.html"
+                        <a class="dropdown-item" href="products.html"
                           >ALL PRODUCTS</a
                         >
                       </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >PRODUCT 1</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >PRODUCT 2</a
-                        >
-                      </li>
+                      <div class="products-dropdown-content"></div>
                     </ul>
                   </li>
-                  <!-- <li class="nav-item dropdown">
-                    <a
-                      class="nav-link"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      SERVICES <i class="fa-solid fa-angle-down"></i
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="services.html"
-                          >SERVICES</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >SERVICES DETAILS</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      BLOG <i class="fa-solid fa-angle-down"></i
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog.html">BLOG POST</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-details.html"
-                          >BLOG DETAILS</a
-                        >
-                      </li>
-                    </ul>
-                  </li> -->
-
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">CONTACT US</a>
                   </li>
@@ -1036,11 +938,15 @@
     <script src="assets/js/countdown.min.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+    <!-- firebase/indexpage.js -->
+    <script type="module" src="firebase/indexpage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
 
     <!-- ========================= Countdown Js Start ===================== -->
     <script>
       $(document).ready(function () {
-        $("#offer-countdown").countdown("2023/12/29", function (event) {
+        $("#offer-countdown").countdown("2024/12/29", function (event) {
           $(this).html(
             event.strftime(
               '<div class="single-countdown"><h4>%D</h4><span>DAYS</span></div> <div class="single-countdown"><h4>%H</h4><span>HOURS</span></div> <div class="single-countdown"><h4>%M</h4><span>MIN</span></div> <div class="single-countdown"><h4>%S</h4><span>SEC</span></div>'

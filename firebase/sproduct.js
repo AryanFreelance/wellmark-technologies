@@ -3,6 +3,7 @@ import {
   getDatabase,
   ref,
   get,
+  onValue,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
 const firebaseConfig = {
@@ -82,3 +83,46 @@ async function fetchProductDetails() {
 
 // Initialize product details
 fetchProductDetails();
+
+// Function to display products
+function displayNavbarProducts(titles) {
+  const productList = document.querySelector(".products-dropdown-content");
+
+  titles.forEach((title) => {
+    const productItem = document.createElement("li");
+    productItem.innerHTML = `
+          <a class="dropdown-item" href="../products/products.html?id=${title.id}"
+            >${title.title}</a
+          >
+      `;
+    console.log("PRODUCTITEM", productItem);
+    productList.appendChild(productItem);
+  });
+}
+
+function fetchProducts() {
+  const productsRef = ref(db, "products");
+  onValue(productsRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+    if (data) {
+      const productsArray = Object.keys(data).map((key) => ({
+        id: key,
+        ...data[key],
+      }));
+
+      // Create a new array of the title, and id of the products in a single array from the productsArray
+      const productsTitleArray = productsArray.map((product) => ({
+        title: product.title,
+        id: product.id,
+      }));
+
+      console.log("PRODUCTSTITLEARRAY", productsTitleArray);
+      console.log("PRODUCTSARRAY", productsArray);
+
+      displayNavbarProducts(productsTitleArray);
+    }
+  });
+}
+
+fetchProducts();

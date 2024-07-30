@@ -56,13 +56,6 @@
               </li>
             </ul>
           </div>
-          <!-- <div class="top-button d-flex flex-wrap justify-content-between align-items-center">
-                <ul class="login-registration d-flex flex-wrap justify-content-between align-items-center">
-                    <li><a href="login.html"><span class="icon-user-1"></span> Login</a></li>
-                    <li>/</li>
-                    <li><a href="registration.html">Register</a></li>
-                </ul>
-            </div> -->
         </div>
       </div>
     </div>
@@ -88,39 +81,8 @@
               >
                 <i class="fa-solid fa-bars"></i>
               </button>
-
-              <!-- <div class="toggle-search-box">
-                <div class="search-icon">
-                  <span class="icon-search"></span>
-                </div>
-                <div class="search-input">
-                  <form>
-                    <input type="text" placeholder="Search..." />
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                  </form>
-                </div>
-              </div> -->
-
-              <!-- <div class="toggle-bar">
-                <div class="bar-icon">
-                  <span class="icon-paragraph"></span>
-                </div>
-              </div> -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-menu ms-auto">
-                  <!-- <li class="nav-item d-block d-lg-none">
-                    <ul
-                      class="login-registration d-flex flex-wrap align-items-center justify-content-start"
-                    >
-                      <li>
-                        <a href="login.html"
-                          ><span class="icon-user-1"></span> Login</a
-                        >
-                      </li>
-                      <li>|</li>
-                      <li><a href="registration.html">Registration</a></li>
-                    </ul>
-                  </li> -->
                   <li class="nav-item">
                     <a
                       class="nav-link"
@@ -129,18 +91,7 @@
                       aria-expanded="false"
                     >
                       HOME
-                      <!-- <i class="fa-solid fa-angle-down"></i> -->
                     </a>
-                    <!-- <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="index.html">HOME 01</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="home-two.html"
-                          >HOME 02</a
-                        >
-                      </li>
-                    </ul> -->
                   </li>
                   <li class="nav-item">
                     <a
@@ -178,63 +129,9 @@
                           >ALL PRODUCTS</a
                         >
                       </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >PRODUCT 1</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >PRODUCT 2</a
-                        >
-                      </li>
+                      <div class="products-dropdown-content"></div>
                     </ul>
                   </li>
-                  <!-- <li class="nav-item dropdown">
-                    <a
-                      class="nav-link"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      SERVICES <i class="fa-solid fa-angle-down"></i
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="services.html"
-                          >SERVICES</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="services-details.html"
-                          >SERVICES DETAILS</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      BLOG <i class="fa-solid fa-angle-down"></i
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog.html">BLOG POST</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-details.html"
-                          >BLOG DETAILS</a
-                        >
-                      </li>
-                    </ul>
-                  </li> -->
-
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">CONTACT US</a>
                   </li>
@@ -731,31 +628,9 @@
     <script src="assets/js/main.js"></script>
     <!-- firebase/config.js -->
     <script type="module" src="firebase/config.js"></script>
+    <!-- firebase/indexpage.js -->
+    <script type="module" src="firebase/indexpage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
-
-    <!-- <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyAXzpr1w-PzfuCpwQUn0sDBWHi2kGyPnqE",
-        authDomain: "wellmarktechnologies-e8d72.firebaseapp.com",
-        databaseURL:
-          "https://wellmarktechnologies-e8d72-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "wellmarktechnologies-e8d72",
-        storageBucket: "wellmarktechnologies-e8d72.appspot.com",
-        messagingSenderId: "412011432367",
-        appId: "1:412011432367:web:b77a92aafef3ff6050075a",
-        measurementId: "G-0EVDCFKTYP",
-      };
-
-      firebase.initializeApp(firebaseConfig);
-
-      var database = firebase.database();
-
-      database.ref("products").once("value", function (snapshot) {
-        var data = snapshot.val();
-        console.log(data.name);
-        console.log(data.age);
-      });
-    </script> -->
   </body>
 </html>

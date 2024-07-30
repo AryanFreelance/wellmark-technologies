@@ -21,31 +21,17 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 // Function to display products
-function displayProducts(products) {
-  const productList = document.getElementById("product-list");
-  productList.innerHTML = ""; // Clear any existing content
+function displayNavbarProducts(titles) {
+  const productList = document.querySelector(".products-dropdown-content");
 
-  products.forEach((product) => {
-    const productItem = document.createElement("div");
-    productItem.classList.add("col-lg-4", "col-md-6");
+  titles.forEach((title) => {
+    const productItem = document.createElement("li");
     productItem.innerHTML = `
-        <div class="services-item">
-          <div class="background-img">
-            <img
-              src="assets/images/products/olt/sy-gpon-16olt.webp"
-              alt=""
-            />
-          </div>
-          <!-- <div class="icon"><span class="icon-idea"></span></div> -->
-          <h4 class="title">${product.title}</h4>
-          <p class="para">
-            ${product.description}
-          </p>
-          <a href="products/products.html?id=${product.id}" class="btn--base-two style-two">
-            <i class="fas fa-circle"></i>Shop OLT<i class="fas fa-circle"></i
-          ></a>
-        </div>
+          <a class="dropdown-item" href="products/products.html?id=${title.id}"
+            >${title.title}</a
+          >
       `;
+    console.log("PRODUCTITEM", productItem);
     productList.appendChild(productItem);
   });
 }
@@ -60,9 +46,17 @@ function fetchProducts() {
         id: key,
         ...data[key],
       }));
+
+      // Create a new array of the title, and id of the products in a single array from the productsArray
+      const productsTitleArray = productsArray.map((product) => ({
+        title: product.title,
+        id: product.id,
+      }));
+
+      console.log("PRODUCTSTITLEARRAY", productsTitleArray);
       console.log("PRODUCTSARRAY", productsArray);
 
-      displayProducts(productsArray);
+      displayNavbarProducts(productsTitleArray);
     }
   });
 }
