@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>Products | Wellmark Technoogies | Distributors & Partners</title>
+    <title>Wellmark Technoogies | Distributors & Partners</title>
     <!-- favicon -->
-    <link rel="icon" href="assets/images/favicon/favicon.png" />
+    <link rel="icon" href="../assets/images/favicon/favicon.png" />
     <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
     <!-- slick -->
-    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="../assets/css/slick.css" />
     <!-- maginific -->
-    <link rel="stylesheet" href="assets/css/magnific-ppopup.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-ppopup.css" />
     <!-- odoteter -->
-    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="../assets/css/odometer.css" />
     <!-- Flaticon -->
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="../assets/css/flaticon.css" />
     <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
     <!--==================== Preloader Start ====================-->
@@ -74,8 +74,8 @@
         <div class="header-wrapper position-relative">
           <div class="header-bottom">
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand logo" href="/index.html"
-                ><img src="assets/images/home-01/logo/logo.png" alt=""
+              <a class="navbar-brand logo" href="../index.html"
+                ><img src="../assets/images/home-01/logo/logo.png" alt=""
               /></a>
               <button
                 class="navbar-toggler header-button"
@@ -124,7 +124,7 @@
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="index.html"
+                      href="../index.html"
                       role="button"
                       aria-expanded="false"
                     >
@@ -145,7 +145,7 @@
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="about.html"
+                      href="../about.html"
                       role="button"
                       aria-expanded="false"
                     >
@@ -155,7 +155,7 @@
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="services.html"
+                      href="../services.html"
                       role="button"
                       aria-expanded="false"
                     >
@@ -174,17 +174,17 @@
                     ></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="products.html"
+                        <a class="dropdown-item" href="../products.html"
                           >ALL PRODUCTS</a
                         >
                       </li>
                       <li>
-                        <a class="dropdown-item" href="services-details.html"
+                        <a class="dropdown-item" href="../services-details.html"
                           >PRODUCT 1</a
                         >
                       </li>
                       <li>
-                        <a class="dropdown-item" href="services-details.html"
+                        <a class="dropdown-item" href="../services-details.html"
                           >PRODUCT 2</a
                         >
                       </li>
@@ -236,7 +236,7 @@
                   </li> -->
 
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">CONTACT US</a>
+                    <a class="nav-link" href="../contact.html">CONTACT US</a>
                   </li>
                 </ul>
               </div>
@@ -250,21 +250,26 @@
     <!-- ==================== Beadcumb Start Here ==================== -->
     <section
       class="breadcumb bg-img overlay-bg py-80"
-      style="background-image: url(assets/images/breadcumb/breadcumb.png)"
+      style="background-image: url(../assets/images/breadcumb/breadcumb.png)"
     >
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="breadcumb-content">
-              <h4 class="breadcumb-title text-center text-white">
-                OUR PRODUCTS
+              <h4
+                class="breadcumb-title text-center text-white"
+                id="product-heading"
+              >
+                CATEGORY NAME
               </h4>
               <ul
                 class="breadcumb-list d-flex justify-content-center align-items-center"
               >
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="../index.html">HOME</a></li>
                 <li><span>/</span></li>
-                <li>PRODUCTS</li>
+                <li><a href="../products.html">PRODUCTS</a></li>
+                <li><span>/</span></li>
+                <li id="product-title">CATEGORY</li>
               </ul>
             </div>
           </div>
@@ -273,13 +278,10 @@
     </section>
     <!-- ==================== Beadcumb  End Here ==================== -->
 
-    <!-- <div id="product-list"></div> -->
-
     <!-- ==================== Services Start Here ==================== -->
     <section class="services py-100">
       <div class="container">
-        <div class="row justify-content-center g-4">
-          <div id="product-list" class="row g-4"></div>
+        <div class="row justify-content-center g-4" id="category-product">
         </div>
       </div>
     </section>
@@ -288,7 +290,7 @@
     <!-- ========================= Faq Start Here ==================== -->
     <section
       class="faq py-100 bg-img overlay-bg"
-      style="background-image: url(assets/images/home-01/offer/offer-bg.png)"
+      style="background-image: url(../assets/images/home-01/offer/offer-bg.png)"
     >
       <div class="container">
         <div class="row justify-content-end">
@@ -461,7 +463,7 @@
     <!-- ========================= CTA Start Here ==================== -->
     <section
       class="cta py-100 overlay-bg bg-img"
-      style="background-image: url(assets/images/services/cta.png)"
+      style="background-image: url(../assets/images/services/cta.png)"
     >
       <div class="container">
         <div class="row justify-content-center text-center">
@@ -470,7 +472,7 @@
               <h3 class="title text-white mb-xl-4 mb-3">
                 SAVE MONEY BY BUNDLING YOUR INTERNET SERVICE
               </h3>
-              <a href="contact.html" class="btn--base style-two"
+              <a href="../contact.html" class="btn--base style-two"
                 >CONTACT US $20 <i class="icon-check-mark"></i
               ></a>
             </div>
@@ -490,7 +492,7 @@
             >
               <div class="icon">
                 <img
-                  src="assets/images/home-01/footer_contact/contact-01.png"
+                  src="../assets/images/home-01/footer_contact/contact-01.png"
                   alt=""
                 />
               </div>
@@ -507,7 +509,7 @@
             >
               <div class="icon">
                 <img
-                  src="assets/images/home-01/footer_contact/contact-02.png"
+                  src="../assets/images/home-01/footer_contact/contact-02.png"
                   alt=""
                 />
               </div>
@@ -524,7 +526,7 @@
             >
               <div class="icon">
                 <img
-                  src="assets/images/home-01/footer_contact/contact-03.png"
+                  src="../assets/images/home-01/footer_contact/contact-03.png"
                   alt=""
                 />
               </div>
@@ -543,14 +545,16 @@
     <!-- ==================== Footer End Here ==================== -->
     <footer
       class="footer-area bg-img"
-      style="background-image: url(assets/images/home-01/footer/footer-bg.png)"
+      style="
+        background-image: url(../assets/images/home-01/footer/footer-bg.png);
+      "
     >
       <div class="container py-100">
         <div class="row justify-content-between gy-5">
           <div class="col-lg-3 col-sm-6">
             <div class="footer-item">
-              <a href="index.html">
-                <img src="assets/images/home-01/logo/footer-logo.png" alt=""
+              <a href="../index.html">
+                <img src="../assets/images/home-01/logo/footer-logo.png" alt=""
               /></a>
               <p class="content">
                 Get a dedicated server hosted on your end to complete your daily
@@ -578,19 +582,19 @@
               <ul class="footer-menu">
                 <li>
                   <i class="fas fa-square-full"></i
-                  ><a href="index.html">Home</a>
+                  ><a href="../index.html">Home</a>
                 </li>
                 <li>
                   <i class="fas fa-square-full"></i
-                  ><a href="about.html">About Us</a>
+                  ><a href="../about.html">About Us</a>
                 </li>
                 <li>
                   <i class="fas fa-square-full"></i
-                  ><a href="products.html">Products</a>
+                  ><a href="../products.html">Products</a>
                 </li>
                 <li>
                   <i class="fas fa-square-full"></i
-                  ><a href="contact.html">Contact</a>
+                  ><a href="../contact.html">Contact</a>
                 </li>
               </ul>
             </div>
@@ -714,48 +718,24 @@
     <!-- ==================== Scroll to Top End Here ==================== -->
 
     <!-- popper js -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <!-- popper js -->
-    <script src="assets/js/popper.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
     <!-- bootstrap js -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
     <!-- slick js -->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
     <!-- maginific js -->
-    <script src="assets/js/maginific.popup.min.js"></script>
+    <script src="../assets/js/maginific.popup.min.js"></script>
     <!-- odometer js -->
-    <script src="assets/js/odometer.min.js"></script>
+    <script src="../assets/js/odometer.min.js"></script>
     <!-- viewport js -->
-    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="../assets/js/viewport.jquery.js"></script>
     <!-- main js -->
-    <script src="assets/js/main.js"></script>
-    <!-- firebase/config.js -->
-    <script type="module" src="firebase/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <!-- firebase/product.js -->
+    <script type="module" src="../firebase/product.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
-
-    <!-- <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyAXzpr1w-PzfuCpwQUn0sDBWHi2kGyPnqE",
-        authDomain: "wellmarktechnologies-e8d72.firebaseapp.com",
-        databaseURL:
-          "https://wellmarktechnologies-e8d72-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "wellmarktechnologies-e8d72",
-        storageBucket: "wellmarktechnologies-e8d72.appspot.com",
-        messagingSenderId: "412011432367",
-        appId: "1:412011432367:web:b77a92aafef3ff6050075a",
-        measurementId: "G-0EVDCFKTYP",
-      };
-
-      firebase.initializeApp(firebaseConfig);
-
-      var database = firebase.database();
-
-      database.ref("products").once("value", function (snapshot) {
-        var data = snapshot.val();
-        console.log(data.name);
-        console.log(data.age);
-      });
-    </script> -->
   </body>
 </html>
