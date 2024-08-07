@@ -1,162 +1,161 @@
 .contact-form-field {
-    position: relative;
+  position: relative;
   a {
     text-decoration: underline;
     color: $base-color;
     &.forgot {
-        text-decoration: none;
-        color: $secondary-color;
-        &:hover {
-            color: $base-color;
-        }
+      text-decoration: none;
+      color: $secondary-color;
+      &:hover {
+        color: $base-color;
+      }
     }
   }
   span {
     position: absolute;
     right: 15px;
-    top: 60%; 
+    top: 60%;
     cursor: pointer;
   }
 }
 
 .account-left {
+  position: relative;
+  margin: 20px 0;
+  strong {
     position: relative;
-    margin: 20px 0;
-    strong {
+    z-index: 1;
+    display: block;
+    &::after {
+      text-align: center;
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #377574;
+      right: 133px;
+      bottom: 136px;
+      z-index: -1;
+      border-radius: 50% 50% 0 0;
+      transform: rotate(23deg);
+      @media (max-width: 1399px) {
+        right: 80px;
+        bottom: 136px;
+        transform: rotate(20deg);
+      }
+      @media (max-width: 1199px) {
+        right: 30px;
+        bottom: 143px;
+        transform: rotate(22deg);
+      }
+      @media (max-width: 991px) {
+        right: 107px;
+        bottom: 140px;
+        transform: rotate(22deg);
+      }
+      @media (max-width: 767px) {
+        right: 17px;
+      }
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+    &::before {
+      text-align: center;
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: $base-color;
+      left: 466px;
+      bottom: 470px;
+      z-index: -1;
+      border-radius: 50% 50% 0 0;
+      transform: rotate(116deg);
+      @media (max-width: 1399px) {
+        left: 466px;
+        bottom: 470px;
+        opacity: 0;
+      }
+      @media (max-width: 1199px) {
+        left: 466px;
+        bottom: 470px;
+      }
+      @media (max-width: 991px) {
+        left: 445px;
+        bottom: 469px;
+        opacity: 1;
+        transform: rotate(119deg);
+      }
+      @media (max-width: 767px) {
+        left: 355px;
+      }
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.account-thumbs {
+  position: relative;
+  text-align: center;
+  span {
+    &:first-child {
+      max-width: 480px;
+      border-radius: 50%;
+      max-height: 480px;
       position: relative;
       z-index: 1;
-      display: block;
-      &::after {
-        text-align: center;
-        position: absolute;
-        content: "";
-        width: 10px;
-        height: 10px;
-        background-color: #DF0E0E;
-        right: 133px;
-        bottom: 136px;
-        z-index: -1;
-        border-radius: 50% 50% 0 0;
-        transform: rotate(23deg);
-        @media (max-width: 1399px) {
-            right: 80px;
-            bottom: 136px;
-            transform: rotate(20deg);
-        }
-        @media (max-width: 1199px) {
-            right: 30px;
-            bottom: 143px;
-            transform: rotate(22deg);
-        }
-        @media (max-width: 991px) {
-            right: 107px;
-            bottom: 140px;
-            transform: rotate(22deg);
-        }
-        @media (max-width: 767px) {
-            right: 17px;
-        }
-        @media (max-width: 575px) {
-            display: none;
-        }
-      }
       &::before {
         text-align: center;
         position: absolute;
         content: "";
-        width: 10px;
-        height: 10px;
-        background-color: $base-color;
-        left: 466px;
-        bottom: 470px;
+        width: 520px;
+        height: 520px;
+        background-color: transparent;
+        left: -20px;
+        top: -20px;
         z-index: -1;
-        border-radius: 50% 50% 0 0;
-        transform: rotate(116deg);
+        border-radius: 50%;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #f2121200 $base-color $base-color $base-color;
+        transform: rotate(68deg);
         @media (max-width: 1399px) {
-            left: 466px;
-            bottom: 470px;
-            opacity: 0;
+          border-color: #f2121200 $base-color $base-color $base-color;
         }
         @media (max-width: 1199px) {
-            left: 466px;
-            bottom: 470px;
+          left: -22px;
+          top: -26px;
         }
         @media (max-width: 991px) {
-            left: 445px;
-            bottom: 469px;
-            opacity: 1;
-            transform: rotate(119deg);
-        }
-        @media (max-width: 767px) {
-            left: 355px;
+          left: -20px;
+          top: -21px;
         }
         @media (max-width: 575px) {
-            display: none;
-        }
-      }
-    }
-  }
-
-.account-thumbs {
-    position: relative;
-    text-align: center;
-    span {
-      &:first-child {
-        max-width: 480px;
-        border-radius: 50%;
-        max-height: 480px;
-        position: relative;
-        z-index: 1;
-        &::before {
-            text-align: center;
-            position: absolute;
-            content: "";
-            width: 520px;
-            height: 520px;
-            background-color: transparent;
-            left: -20px;
-            top: -20px;
-            z-index: -1;
-            border-radius: 50%;
-            border-width: 10px;
-            border-style: solid;
-            border-color: #f2121200 $base-color $base-color $base-color;
-            transform: rotate(68deg);
-          @media (max-width: 1399px) {
-            
-            border-color: #f2121200 $base-color $base-color $base-color;
-          }
-          @media (max-width: 1199px) {
-            left: -22px;
-            top: -26px;
-          }
-          @media (max-width: 991px) {
-            left: -20px;
-            top: -21px;
-          }
-          @media (max-width: 575px) {
-            display: none;
-        }
-        }
-        img {
-          border-radius: 50%;
-        }
-      }
-      &:last-child {
-        position: absolute;
-        max-width: 250px;
-        height: 250px;
-        right: 0px;
-        top: 0;
-        border-radius: 50%;
-        z-index: 1;
-  
-        @media (max-width: 991px) {
           display: none;
         }
-        img {
-          border-radius: 50%;
-        }
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+    &:last-child {
+      position: absolute;
+      max-width: 250px;
+      height: 250px;
+      right: 0px;
+      top: 0;
+      border-radius: 50%;
+      z-index: 1;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+      img {
+        border-radius: 50%;
       }
     }
   }
+}

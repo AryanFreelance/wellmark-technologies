@@ -2,17 +2,17 @@
   background-color: #222429;
 }
 .testimonial-thumbs {
-    padding-left: 30px;
+  padding-left: 30px;
   img {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
 
 .testi-slider {
-    padding: 0 20px;
-    @media (max-width: 400px) {
-        padding: 5px;
-    }
+  padding: 0 20px;
+  @media (max-width: 400px) {
+    padding: 5px;
+  }
   .testi-content {
     padding: 0 15px;
     .icon {
@@ -29,63 +29,62 @@
     top: auto;
     bottom: 0 !important;
     @media (max-width: 991px) {
-        margin-top: -43px;
+      margin-top: -43px;
     }
     &:hover {
-        color: $white;
-        background-color: $base-color;
+      color: $white;
+      background-color: $base-color;
     }
     &.slick-next {
-        right: 75px;
-        @media (max-width: 575px) {
-          right: 70px;
-        }
+      right: 75px;
+      @media (max-width: 575px) {
+        right: 70px;
+      }
     }
     &.slick-prev {
-        right: 19px;
+      right: 19px;
     }
-}
+  }
 }
 .client-meta {
-    .meta-thumb {
-        width: 65px;
-        border-radius: 50%;
-        overflow: hidden;
-        object-fit: cover;
-      }
-      
-      .meta-content {
-        width: calc(100% - 65px);
-        padding-left: 20px;
-        .name{
-            font-weight: 500;
-            color: #F2F2F2;
-        }
-        .designation {
-            color: #F2F2F2;
-            font-weight: 300;
-            font-size: 15px;
-        }
-      }
-}
+  .meta-thumb {
+    width: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
 
+  .meta-content {
+    width: calc(100% - 65px);
+    padding-left: 20px;
+    .name {
+      font-weight: 500;
+      color: #f2f2f2;
+    }
+    .designation {
+      color: #f2f2f2;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+}
 
 // Testimonails Right Css
 .testimonial-right {
-  background-color: #c61e1e;
+  background-color: #548f8e;
   .right-item {
     padding: 54px 40px;
     @media (max-width: 1199px) {
-        padding: 40px 35px;
+      padding: 40px 35px;
     }
     @media (max-width: 767px) {
-        padding: 30px 30;
+      padding: 30px 30;
     }
     @media (max-width: 575px) {
-        padding: 25px 20px;
+      padding: 25px 20px;
     }
     @media (max-width: 400px) {
-        padding: 20px 10px;
+      padding: 20px 10px;
     }
     &:nth-child(even) {
       background-color: $base-color;
@@ -108,10 +107,10 @@
       }
       img {
         width: 34px;
-        
-      @media (max-width: 767px) {
-        width: 30px;
-      }
+
+        @media (max-width: 767px) {
+          width: 30px;
+        }
       }
     }
     .content {
@@ -124,14 +123,14 @@
         font-weight: 500;
         font-size: 24px;
         @media (max-width: 575px) {
-            font-size: 20px;
+          font-size: 20px;
         }
       }
       .para {
         max-width: 390px;
         @media (max-width: 991px) {
           max-width: 100%;
-      }
+        }
       }
       .btn--base-two {
         color: $white;

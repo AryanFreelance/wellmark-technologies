@@ -7,12 +7,14 @@
       padding: 0 0px;
       top: 75px;
     }
-    &:hover .content{
+    &:hover .content {
       background-color: #fbfbfb;
-          .name, .name a, .designation  {
-              color: $secondary-color;
-          }
-      }  
+      .name,
+      .name a,
+      .designation {
+        color: $secondary-color;
+      }
+    }
     .thumb {
       img {
         max-height: 570px;
@@ -36,7 +38,7 @@
 }
 
 .team-member-data {
-  background-color: #df0e0e0a;
+  background-color: #3775740a;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -77,16 +79,16 @@
     font-weight: 500;
   }
   .para {
-      font-weight: 400;
+    font-weight: 400;
   }
   .progress {
-      height: 18px;
-      background-color: rgba(0, 0, 0, 0.15);
-      border-radius: 5px !important;
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px !important;
     .progress-bar {
-        background-color: $base-color;
-        font-weight: 500;
-        font-size: 15px;
+      background-color: $base-color;
+      font-weight: 500;
+      font-size: 15px;
     }
   }
 }
