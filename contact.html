@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>ViserFix - TV & Internet Provider HTML Template</title>
+    <title>Wellmark Technoogies | Distributors & Partners</title>
     <!-- favicon -->
     <link rel="icon" href="assets/images/favicon/favicon.png" />
     <!-- bootstrap -->
@@ -249,13 +249,13 @@
             </p>
           </div>
           <div class="col-lg-6">
-            <form action="#" autocomplete="off">
+            <form autocomplete="off" onsubmit="submitContactFormHandler(event)">
               <div class="row">
                 <div class="col-md-6">
                   <div class="contact-form-field mb-4">
                     <input
                       type="text"
-                      id="yourname"
+                      id="name"
                       class="form-control form--control style-two"
                       placeholder="Your Name"
                       required=""
@@ -266,7 +266,7 @@
                   <div class="contact-form-field mb-4">
                     <input
                       type="email"
-                      id="yourEmail"
+                      id="email"
                       class="form-control form--control style-two"
                       placeholder="Email"
                       required=""
@@ -288,7 +288,7 @@
                   <div class="contact-form-field mb-4">
                     <input
                       type="text"
-                      id="yoursubject"
+                      id="subject"
                       class="form-control form--control style-two"
                       placeholder="Subject"
                       required=""
@@ -298,7 +298,7 @@
                 <div class="col-md-12">
                   <div class="contact-form-field mb-4">
                     <textarea
-                      id="yourComment"
+                      id="message"
                       class="form-control form--control style-two"
                       placeholder="Message"
                       spellcheck="false"
@@ -307,7 +307,11 @@
                 </div>
                 <div class="col-md-12 mt-2">
                   <div class="contact-form-field">
-                    <button type="submit" class="btn--base">
+                    <button
+                      type="submit"
+                      onclick="submitContactFormHandler(event)"
+                      class="btn--base"
+                    >
                       SEND MESSAGE
                     </button>
                   </div>
@@ -524,5 +528,47 @@
     <script type="module" src="firebase/indexpage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
+
+    <script>
+      function submitContactFormHandler(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Get form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Prepare the data for sending
+        const data = {
+          name,
+          email,
+          phone,
+          subject,
+          message,
+        };
+
+        fetch("https://wellmark-admin-contact.onrender.com/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            alert("Thank you for contacting! We'll get back to you ASAP.");
+            // Optionally clear the form fields
+            document.querySelector("form").reset();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Something went wrong! Please try again later.");
+            document.querySelector("form").reset();
+          });
+      }
+    </script>
   </body>
 </html>
