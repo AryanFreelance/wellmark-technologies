@@ -540,6 +540,9 @@
         const subject = document.getElementById("subject").value;
         const message = document.getElementById("message").value;
 
+        // disable the submit button
+        document.querySelector("button[type=submit]").disabled = true;
+
         // Prepare the data for sending
         const data = {
           name,
@@ -567,6 +570,7 @@
             console.error("Error:", error);
             alert("Something went wrong! Please try again later.");
             document.querySelector("form").reset();
+            document.querySelector("button[type=submit]").disabled = false;
           });
       }
     </script>
