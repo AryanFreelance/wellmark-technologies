@@ -561,10 +561,11 @@
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log("Success:", data);
+            // console.log("Success:", data);
             alert("Thank you for contacting! We'll get back to you ASAP.");
             // Optionally clear the form fields
             document.querySelector("form").reset();
+            document.querySelector("button[type=submit]").disabled = false;
           })
           .catch((error) => {
             console.error("Error:", error);
