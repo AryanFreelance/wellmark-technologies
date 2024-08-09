@@ -728,12 +728,12 @@ span {
 
 ::-moz-selection {
   color: #fff;
-  background-color: #ce0f0f;
+  background-color: #377574c1;
 }
 
 ::selection {
   color: #fff;
-  background-color: #ce0f0f;
+  background-color: #377574c1;
 }
 
 ::-webkit-scrollbar {
