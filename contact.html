@@ -540,6 +540,8 @@
         const subject = document.getElementById("subject").value;
         const message = document.getElementById("message").value;
 
+        console.log(name, email, phone, subject, message);
+
         // disable the submit button
         document.querySelector("button[type=submit]").disabled = true;
 
@@ -556,6 +558,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify(data),
         })

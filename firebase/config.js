@@ -42,7 +42,7 @@ function displayProducts(products) {
             ${product.description}
           </p>
           <a href="products/products.html?id=${product.id}" class="btn--base-two style-two">
-            <i class="fas fa-circle"></i>Shop OLT<i class="fas fa-circle"></i
+            <i class="fas fa-circle"></i>Shop Now<i class="fas fa-circle"></i
           ></a>
         </div>
       `;
