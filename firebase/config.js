@@ -39,11 +39,11 @@ function displayProducts(products) {
           <!-- <div class="icon"><span class="icon-idea"></span></div> -->
           <h4 class="title">${product.title}</h4>
           <p class="para">
-            ${product.description}
+            ${product.description.substring(0, 100)}...
           </p>
-          <a href="products/products.html?id=${product.id}" class="btn--base-two style-two">
-            <i class="fas fa-circle"></i>Shop Now<i class="fas fa-circle"></i
-          ></a>
+          <a href="products/products.html?id=${product.id}" class="btn--base">
+          Shop Now
+          </a>
         </div>
       `;
     productList.appendChild(productItem);

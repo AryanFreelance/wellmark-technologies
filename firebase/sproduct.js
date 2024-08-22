@@ -90,7 +90,7 @@ async function fetchProductDetails() {
     const productName = document.getElementById("sproduct-name");
     productName.innerText = sproduct.title;
     displayProductDetails(sproduct);
-    title = `${sproduct.title} | Wellmark Technoogies | Distributors & Partners`;
+    title = `${sproduct.title} | Wellmark Technologies | Distributors & Partners`;
   } else {
     document.getElementById("sproduct-title").innerText = "Product not found";
     title = "Not found | Wellmark Technologies | Distributors & Partners";

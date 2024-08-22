@@ -52,9 +52,8 @@ function displayProductDetails(product) {
           <p class="para">
             ${sproduct.description}
           </p>
-          <a href="../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base-two style-two">
-            <i class="fas fa-circle"></i>Shop Now<i class="fas fa-circle"></i
-          ></a>
+          <a href="../product/product.html?category=${product.id}&id=${sproduct.id}" class="btn--base">
+            Shop Now</a>
         </div>
       `;
     productDetail.appendChild(productItem);
@@ -72,7 +71,7 @@ async function fetchProductDetails() {
     const product = snapshot.val();
     console.log("PRODYCTS", product);
     displayProductDetails(product);
-    title = `${product.title} | Wellmark Technoogies | Distributors & Partners`;
+    title = `${product.title} | Wellmark Technologies | Distributors & Partners`;
   } else {
     document.getElementById("product-detail").innerText = "Product not found";
     title = "Not found | Wellmark Technologies | Distributors & Partners";
