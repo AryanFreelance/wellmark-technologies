@@ -2342,7 +2342,7 @@ ul[class*="custom--tab"] li:last-child button {
   width: 110px;
   margin: 200px auto;
   position: relative;
-  border-top-color: gold;
+  border-top-color: #377574;
   -webkit-animation-name: spin;
   animation-name: spin;
   -webkit-animation-duration: 1.1s;
@@ -2364,7 +2364,7 @@ ul[class*="custom--tab"] li:last-child button {
   left: 10px;
   bottom: 10px;
   right: 10px;
-  border-top-color: red;
+  border-top-color: #5aa4a3;
   -webkit-animation-name: spin;
   animation-name: spin;
   -webkit-animation-duration: 2.1s;
@@ -2381,7 +2381,7 @@ ul[class*="custom--tab"] li:last-child button {
   left: 23px;
   bottom: 23px;
   right: 23px;
-  border-top-color: indigo;
+  border-top-color: #74c0be;
   -webkit-animation-name: spin;
   animation-name: spin;
   -webkit-animation-delay: 1.3s;
@@ -3692,7 +3692,7 @@ ul[class*="custom--tab"] li:last-child button {
 }
 
 .about-right-content .para {
-  max-width: 370px;
+  /* max-width: 370px; */
   margin-top: -8px;
 }
 
