@@ -1724,19 +1724,20 @@ ul[class*="custom--tab"] li:last-child button {
 
 .nav-menu .nav-item:hover .nav-link::before {
   width: 100%;
-  -webkit-transform: rotate(-14deg);
-  transform: rotate(-14deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .nav-menu .nav-link {
   font-weight: 500;
   font-size: 16px;
   color: #141414 !important;
-  padding: 33px 0 !important;
+  padding: 44px 0 !important;
   position: relative;
   margin: 0 10px;
   cursor: pointer;
 }
+
 
 @media (max-width: 991px) {
   .nav-menu .nav-link {
@@ -3847,7 +3848,106 @@ ul[class*="custom--tab"] li:last-child button {
   margin: 0 70px;
   margin-bottom: 100px;
 }
+/* Base Styles for Vertical Tabs */
+.vertical-tabs-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 100%;
+}
 
+/* Vertical Tabs Container */
+.vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Set the width of the tab container */
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  flex: 1;
+}
+
+/* Tab Link Styles */
+.vertical-tabs .tab-link {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  text-align: left;
+  background-color: #f5f5f5;
+  /* Background color for tabs */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  height: 55px;
+  /* Rounded corners for a smoother look */
+}
+
+/* Tab Link Hover State */
+.vertical-tabs .tab-link:hover {
+  background-color: #e0e0e0;
+  /* Hover background color */
+}
+
+/* Active Tab Styles */
+.vertical-tabs .tab-link.active {
+  background-color: #377574;
+  /* Active background color */
+  color: #fff;
+  /* Active text color */
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .vertical-tabs-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    /* Reduced gap for smaller screens */
+  }
+
+  .vertical-tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* Make the tabs container take full width */
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    /* Add a bottom border for separation */
+    padding: 10px 0;
+    
+  }
+
+  .vertical-tabs .tab-link {
+    padding: 10px 15px;
+      margin-bottom: 5px;
+      text-align: left;
+      background-color: #f5f5f5;
+      /* Background color for tabs */
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 5px;
+      height: 55px;
+    /* Ensure the tab link spans the full width */
+  }
+
+  /* Active Tab Mobile Style */
+  .vertical-tabs .tab-link.active {
+    background-color: #377574;
+    /* Same active color for consistency */
+    color: #fff;
+    /* White text for active tab */
+  }
+}
 @media (max-width: 1199px) {
   .fun-fact-left {
     padding: 20px;
