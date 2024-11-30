@@ -1538,6 +1538,7 @@ ul[class*="custom--tab"] li:last-child button {
   background-color: #fff;
   -webkit-box-shadow: 0 0 14px 0px #dddddda3;
   box-shadow: 0 0 14px 0px #dddddda3;
+
 }
 
 .navbar-brand.logo {
@@ -1905,8 +1906,9 @@ ul[class*="custom--tab"] li:last-child button {
 }
 
 .header-top {
-  background-color: #232429;
+  background-color: #ffffff;
   padding: 20px 0 60px;
+  
 }
 
 .top-contact-menu {
@@ -1915,7 +1917,7 @@ ul[class*="custom--tab"] li:last-child button {
 
 .top-contact-menu .item {
   padding: 0 15px;
-  color: #fff;
+  color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1926,7 +1928,7 @@ ul[class*="custom--tab"] li:last-child button {
 
 .top-contact-menu .item span {
   font-size: 16px;
-  color: #fff;
+  color: #000000;
   margin-right: 5px;
 }
 
@@ -1939,7 +1941,7 @@ ul[class*="custom--tab"] li:last-child button {
 }
 
 .top-contact-menu .item a {
-  color: #fff;
+  color: #000000;
   margin-left: 3px;
   font-size: 15px;
 }
